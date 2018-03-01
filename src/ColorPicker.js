@@ -24,10 +24,16 @@ function LabeledSlider(props) {
         type="range"
         min="0"
         max="255"
-        value={props.value}
         onChange={event => props.valueChange(event.target.value)}
+        value={props.value}
       />
-      <span>{props.value}</span>
+      <input
+        type="number"
+        min="0"
+        max="255"
+        onChange={event => props.valueChange(event.target.value)}
+        value={props.value}
+        />
     </div>
   );
 }
